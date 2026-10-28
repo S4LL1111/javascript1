@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan JavaScript</title>
+</head>
+<body>
+
+    <h2>1. Bilangan Ganjil atau Genap</h2>
+
+    Masukkan angka:
+    <input type="number" id="angka">
+    <button onclick="cekBilangan()">Periksa</button>
+    <p id="hasilAngka"></p>
+
+    <hr>
+
+    <h2>2. Konversi Celsius ke Fahrenheit</h2>
+
+    Suhu Celsius:
+    <input type="number" id="celsius">
+    <button onclick="konversiSuhu()">Konversi</button>
+    <p id="hasilSuhu"></p>
+
+    <hr>
+
+    <h2>3. Menghitung Luas Persegi Panjang</h2>
+
+    Panjang:
+    <input type="number" id="panjang">
+    <br><br>
+
+    Lebar:
+    <input type="number" id="lebar">
+    <br><br>
+
+    <button onclick="hitungLuas()">Hitung</button>
+    <p id="hasilLuas"></p>
+
+    <script>
+        function cekBilangan() {
+            let angka = Number(document.getElementById("angka").value);
+
+            if (angka % 2 == 0) {
+                document.getElementById("hasilAngka").innerHTML = "Bilangan Genap";
+            } else {
+                document.getElementById("hasilAngka").innerHTML = "Bilangan Ganjil";
+            }
+        }
+
+        function konversiSuhu() {
+            let celsius = Number(document.getElementById("celsius").value);
+            let fahrenheit = (celsius * 9 / 5) + 32;
+
+            document.getElementById("hasilSuhu").innerHTML =
+                fahrenheit + " Fahrenheit";
+        }
+
+        function hitungLuas() {
+            let panjang = Number(document.getElementById("panjang").value);
+            let lebar = Number(document.getElementById("lebar").value);
+
+            document.getElementById("hasilLuas").innerHTML =
+                "Luas = " + (panjang * lebar);
+        }
+    </script>
+
+</body>
+</html>
